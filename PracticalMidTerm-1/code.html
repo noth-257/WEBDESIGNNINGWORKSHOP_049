@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculator</title>
+<style>
+body {
+    font-family: Arial;
+    background: lightgreen;
+    margin: 0;
+}
+.header {
+    background: #605B51;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.container {
+    width: 300px;
+    margin: 50px auto;
+    background: #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+}
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px;
+}
+button {
+    padding: 8px;
+    width: 95%;
+    background: #667eea;
+    color: white;
+    border: none;
+}
+.result {
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<div class="header">SIMPLE CALCULATOR</div>
+<div class="container">
+    <h3>Enter Numbers</h3>
+    <input type="number" id="num1" placeholder="First number"><br>
+    <input type="number" id="num2" placeholder="Second number"><br>
+    <button onclick="calculate()">Calculate</button>
+    <div class="result" id="result"></div>
+</div>
+<script>
+function calculate() {
+    let n1 = parseFloat(document.getElementById("num1").value);
+    let n2 = parseFloat(document.getElementById("num2").value);
+    if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("result").innerHTML = "Enter valid numbers";
+        return;
+    }
+    let sum = n1 + n2;
+    let diff = n1 - n2;
+    let prod = n1 * n2;
+    document.getElementById("result").innerHTML =
+        "Sum: " + sum + "<br>" +
+        "Difference: " + diff + "<br>" +
+        "Product: " + prod;
+}
+</script>
+</body>
+</html>
