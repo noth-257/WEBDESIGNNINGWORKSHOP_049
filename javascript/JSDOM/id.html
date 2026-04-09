@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM and Event Handling</title>
+</head>
+<body>
+    <!-- Heading with unique ID -->
+    <h1 id="title">Click the buton to find your Soulmate</h1>
+
+    <!-- Button to trigger JavaScript -->
+     <button onclick="changeText()">Click me</button>
+
+     <script>
+        //function that runs when button is clicked
+        function changeText(){
+            
+            // Step1: Select element using getElementById
+            let heading=document.getElementById("title");
+
+            //Step2: Change the text content
+            heading.innerText="Koi Aapse Pyaar kyon karega??🥲";
+
+            //Step3: Change style dynamically
+            heading.style.color="blue";
+        }
+     </script>
+</body>
+</html>
